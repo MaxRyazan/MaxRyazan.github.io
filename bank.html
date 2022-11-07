@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/bankStyles.css">
     <title>Bank</title>
 </head>
 <body>
@@ -18,13 +19,19 @@
                     <nobr class="textImg">github.com</nobr>
                 </a>
                 <a href="/portfolio" class="buttonContainer">
-                    <nobr class="textImg">Пару слов обо мне</nobr>
+                    <nobr class="textImg">Обо мне</nobr>
                 </a>
                 <a href="" class="buttonContainer2">
                     <nobr class="textImg">Мои проекты</nobr>
                 </a>
                 <a href="/bank" class="buttonContainer3">
+                    <div class="pulse">
+                        <div class="pulse2"></div>
+                    </div>
                     <nobr class="textImg">BankOfRyazan</nobr>
+                    <div class="pulse">
+                        <div class="pulse2"></div>
+                    </div>
                 </a>
                 <a href="/terminal" class="buttonContainer">
                     <nobr class="textImg">BankTerminal</nobr>
@@ -48,9 +55,9 @@
                 а так же API REST для получения данных, необходимых для внутренних операций. В данный момент банк использует ТРИ API:</p>
                 <p>1. Бесплатный API курсов валют</p>
                 <p>2. Бесплатный API драгоценных металлов</p>  
-                <p>3. Написаный мной API для получения данных из другой ДБ  </p>
+                <p>3. Написанный мной API для получения данных из другой БД  </p>
                 <p class="title">Итак, что же могут делать клиенты моего банка? Прежде всего, конечно, проводить операции с деньгами.</p>
-                <p>- Каждый клиент имеет "входящие" и  "исходящие" транзакции.Они реализованны в виде сетов, конечно, с сохранением в БД.</p>
+                <p>- Каждый клиент имеет "входящие" и  "исходящие" транзакции. Они реализованны в виде сетов, конечно, с сохранением в БД.</p>
                 <p>- Еще можно сделать вклад под % (через CRM менеджеров)</p>
                 <p>- Доступны инвестиции в драгоценные металлы (курс драгматов приходит с бесплатного API и также сохраняется в БД.). Ведется
                 статистика колебания цен на металлы, и в личном кабинете всегда можно проверить, заработал ты, или наоборот - потерял.</p>
@@ -58,9 +65,9 @@
                 <p>- Через CRM на фреймворке Vaadin менеджер может оформить кредит на клиента</p>
                 <p class="title">Доступны определенные услуги... Этот список я буду расширять во все стороны - хорошая практика.</p>
                 <p>- Есть сервис восстановления  пароля, который работает по принципу "кода с почты" - то есть на почту клиенту приходит проверочный код,
-                с помощью которого можно сменить пароль - в этом мне помог Java Mail</p>
+                и с его помощью можно сменить пароль - в этом мне помог Java Mail</p>
                 <p>- Реализована возможность расчета и покупки полиса ОСАГО для автомобиля - не претендую на экономическую достоверность,
-                но тем не менее вполне рабочий проект</p>
+                но, тем не менее, вполне рабочий проект</p>
                 <p class="title">Ближайшие планы на этот проект</p>
                 <p>- Добавить в личный кабинет сервис смены пароля - добровольный. Сейчас реализован принудительный -  случае, если пароль забыт</p>
                 <p>- Написать сервис авторизации на основе JWT.</p>
@@ -70,10 +77,10 @@
     </div>
     <p class="title">Немного о сущностях и связях таблиц в БД</p>
     <div class="containerMain2">
-        <p class="title">EER диаграмма моего проекта</p>
-        <div class="">
-            <img class="eerSchema" src="img/schema.png" alt="1">
-        </div>
+         <p class="title">EER диаграмма моего проекта</p>
+         <div class="eer">
+             <img class="eerImage" src="img/eer.png" alt="1">
+         </div>
     </div>
     <p class="title">Теперь о самом главном, ради чего всё это затевалось)) - о способе реализации логики</p>
     <div class="containerMain2">
@@ -123,9 +130,12 @@
         <div class="flex-right">
             <img src="img/test2.png" alt="1" class="img50">
             <h5>Проверили, работает ли логика закрытия кредита и смены его статуса на CLOSED,
-            если остаток кредита равен нулю (С округлением, опять таки, копейки - в расход).
+            если остаток кредита равен нулю (С округлением).
             Программа покрывается тестами - цель максимальное покрытие.</h5>
-        </div
+        </div>
     </div>
+    <script src="jscripts/bankPageScripts.js"></script>
+    <script src="jscripts/portfolioPageScripts.js"></script>
+    <script type="text/javascript" language="JavaScript" src="snow.js"></script>
 </body>
 </html>
