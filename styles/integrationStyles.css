@@ -1,0 +1,28 @@
+.zoom-in{
+    transform: scale(1.3);
+}
+.inline{
+    width: 100%;
+    display: inline-flex;
+}
+.left{
+    width: 50%;
+    height: auto;
+    display: inline-flex;
+}
+.right{
+    float: right;
+    width: 50%;
+    margin-left: 25px;
+}
+.image1{
+    max-width: 100%;
+    height: auto;
+}
+.line{
+    height: 100%;
+    border: 2px solid green;
+    box-shadow: 0 0 15px green;
+    margin-left: 10px;
+    margin-right: 10px;
+}

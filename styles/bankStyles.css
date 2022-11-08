@@ -6,22 +6,3 @@
 .eerImage{
     width: 100%;
 }
-.loopa{
-    width: 200px;
-    height: 200px;
-    display: none;
-    border-radius: 50%;
-    position:fixed;
-    background-color: inherit;
-    border: 1px solid black;
-    }
-.X{
-    color: red;
-    margin: auto;
-}
-.X:hover{
-    font-size: 1.3rem;
-    color: darkblue;
-    margin: auto;
-    cursor: pointer;
-}

@@ -18,7 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
         pulse.forEach(pulse => pulse.style.display = 'none')
         pulse2.forEach(pulse => pulse.style.display = 'none')
     }
-})
+});
+
 window.addEventListener('resize', () => {
     if(window.innerWidth < 700) {
         pulse.forEach(pulse => pulse.style.display = 'none')
@@ -27,4 +28,4 @@ window.addEventListener('resize', () => {
         pulse.forEach(pulse => pulse.style.display = 'block')
         pulse2.forEach(pulse => pulse.style.display = 'block')
     }
-})
+});

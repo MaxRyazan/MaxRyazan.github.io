@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/bankStyles.css">
+    <link rel="stylesheet" href="styles/integrationStyles.css">
+</head>
+<body>
+<div class="containerMain">
+    <div class="leftContainer">
+        <div class="avatarContainer">
+            <img src="img/avatar.jpg" class="avatar" alt="avatar">
+        </div>
+        <div class="nav">
+            <a href="https://github.com/MaxRyazan" class="buttonContainer">
+                <nobr class="textImg">github.com</nobr>
+            </a>
+            <a href="/portfolio" class="buttonContainer">
+                <nobr class="textImg">Обо мне</nobr>
+            </a>
+            <a href="" class="buttonContainer2">
+                <h4 class="textImg">Монолитные проекты</h4>
+            </a>
+            <a href="/bank" class="buttonContainer">
+                <nobr class="textImg">BankOfRyazan</nobr>
+            </a>
+            <a href="/terminal" class="buttonContainer">
+                <nobr class="textImg">BankTerminal</nobr>
+            </a>
+            <a href="/vaadin" class="buttonContainer">
+                <nobr class="textImg">Vaadin CRM</nobr>
+            </a>
+            <a href="/rest" class="buttonContainer">
+                <nobr class="textImg">Rest API</nobr>
+            </a>
+            <a href="" class="buttonContainer2">
+                <h4 class="textImg">Модульные проекты</h4>
+            </a>
+            <a href="/integration" class="buttonContainer3">
+                <div class="pulse">
+                    <div class="pulse2"></div>
+                </div>
+                <nobr class="textImg">Integration</nobr>
+                <div class="pulse">
+                    <div class="pulse2"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="rightContainer">
+        <div class="text">
+            <h4>Проект, грамотно поделенный на две части - отдельно frontend(javascript) и отдельно backend(java17, spring mvc)
+                Взаимодействие, как и положено, осуществлено посредством диалога API.
+                Backend взаимодействует с БД, откуда средствами hibernate забирает данные и через rest-контроллеры имеет
+                возможность "отправлять" эти данные тому, кто их запросит.
+            </h4>
+            <h4>
+                Frontend с помощью javascript фетчит нужный URL, получая в респонсе json с данными. После обработки, информация
+                динамически выводится на HTML страницу. Оформил в минималистическом стиле. Добавил поиск, динамически добавил
+                слайдеры с фотографиями для каждого магазина.
+            </h4>
+            <p class="text">
+                Слева код spring rest контроллера, который "отдаёт" данные, а справа - javascript файл, "читающий" данные, и
+                динамически выводящий их на экран
+            </p>
+            <div class="inline">
+                <div class="left">
+                    <img src="img/left.png" alt="" class="image1">
+                </div>
+                <div class="right">
+                     <img src="img/right1.png" alt="" class="image1">
+                    <img src="img/right2.png" alt="" class="image1">
+                </div>
+            </div>
+        </div>
+        <h4 class="title">Полный проект на  <a href="https://github.com/MaxRyazan/Integration">github</a></h4>
+    </div>
+</div>
+<h4 class="title">В браузере это выглядит так:</h4>
+<div class="containerMain2">
+    <div class="inline">
+        <div class="left">
+            <img src="img/browser.png" alt="" class="image1">
+            <div class="line"></div>
+        </div>
+        <div class="right">
+            <p class="text">
+                Здесь представлен список всех цветочных магазинов. Оценка каждого магазина, приходящая с бэкэнда
+                преобразуется в звёздочки для наглядности. Так же каждому магазину программно назначены 3 фотографии, которые
+                располагаются в слайдерах. "Листать фото" - перелистывание слайдера. Фотографии хранятся на фронтэнде, а в базе
+                данных на бэкэнде располагаются лишь названия фотографий. Все названия разные, но построены по одной схеме:
+            </p>
+            <img src="img/shopPhotos.png" alt="" class="image1">
+            <p class="text">
+                Так же, реализована строка поиска - магазин можно найти, зная 3 символа из его названия. Поиск отзывчивый,
+                осуществляется в момент ввода каждого нового символа - поэтому нет надобности совершать доп. действия вроде
+                нажатия подтверждения, или кнопки ENTER.
+            </p>
+            <p class="text">
+                Поиск основан на методе indexOf(), который возвращает -1, если в строке нет искомой подстроки.
+                Всем элементам, кроме найденного прибавляется класс 'hide' - который скрывает контент с экрана (display:'none')
+            </p>
+            <img src="img/search.png" alt="" class="image1">
+        </div>
+    </div>
+</div>
+<script src="jscripts/integration.js"></script>
+<script src="jscripts/portfolioPageScripts.js"></script>
+</body>
+</html>
